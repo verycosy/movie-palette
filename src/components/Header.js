@@ -4,7 +4,9 @@ import styled from "styled-components";
 const Header = styled.header``;
 
 const Title = styled.h1`
-  font-size: 24px;
+  color: #811b21;
+  padding: 20px 0px;
+  font-size: 30px;
   font-weight: 600;
 `;
 

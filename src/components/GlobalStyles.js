@@ -2,6 +2,8 @@ import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
 const globalStyles = createGlobalStyle`
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR");
+
     ${reset};
     a{
         text-decoration:none;
@@ -11,8 +13,10 @@ const globalStyles = createGlobalStyle`
         box-sizing:border-box;
     }
     body{
+        font-family: "Noto Sans KR", sans-serif;
         font-size:12px;
         text-align:center;
+        background-color:rgba(0,0,0,0.02);
     }
 `;
 
