@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import KeyStorage from "api-key-storage";
 import GlobalStyles from "./components/GlobalStyles";
 import Header from "./components/Header";
 import Loader from "./components/Loader";
@@ -53,11 +54,15 @@ class App extends Component {
     const { imageList, page } = this.state;
 
     try {
+      const { key: api_key } = await KeyStorage(
+        process.env.REACT_APP_KEYSTORAGE_ID
+      );
+
       const { data: images } = await axios.get(
         "https://api.themoviedb.org/3/movie/popular",
         {
           params: {
-            api_key: "dbfc56cf620be872eccb06fc5c5b8e53",
+            api_key,
             language: "ko",
             region: "KR",
             page

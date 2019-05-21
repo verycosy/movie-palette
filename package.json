@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "api-key-storage": "^0.0.4",
     "axios": "^0.18.0",
     "image-palette": "^2.1.0",
     "image-pixels": "^2.2.2",
