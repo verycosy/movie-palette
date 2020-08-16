@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import KeyStorage from "api-key-storage";
 import GlobalStyles from "./components/GlobalStyles";
 import Header from "./components/Header";
 import Loader from "./components/Loader";
@@ -24,10 +23,10 @@ class App extends Component {
     page: 1,
     clicked: false,
     color: null,
-    scrollY: 0
+    scrollY: 0,
   };
 
-  _copy = color => {
+  _copy = (color) => {
     const temp = document.createElement("input");
     temp.value = color;
     document.querySelector("body").append(temp);
@@ -38,13 +37,13 @@ class App extends Component {
     this.setState({
       clicked: true,
       color,
-      scrollY: window.scrollY
+      scrollY: window.scrollY,
     });
 
     setTimeout(
       () =>
         this.setState({
-          clicked: false
+          clicked: false,
         }),
       1200
     );
@@ -54,27 +53,23 @@ class App extends Component {
     const { imageList, page } = this.state;
 
     try {
-      const { key: api_key } = await KeyStorage(
-        process.env.REACT_APP_KEYSTORAGE_ID
-      );
-
       const { data: images } = await axios.get(
         "https://api.themoviedb.org/3/movie/popular",
         {
           params: {
-            api_key,
+            api_key: "dbfc56cf620be872eccb06fc5c5b8e53",
             language: "ko",
             region: "KR",
-            page
-          }
+            page,
+          },
         }
       );
 
-      images.results.forEach(image => {
+      images.results.forEach((image) => {
         imageList.push({
           original_title: image.original_title,
           title: image.title,
-          src: "https://image.tmdb.org/t/p/w500" + image.backdrop_path
+          src: "https://image.tmdb.org/t/p/w500" + image.backdrop_path,
         });
       });
     } catch (err) {
@@ -83,7 +78,7 @@ class App extends Component {
       this.setState({
         loading: false,
         imageList,
-        page
+        page,
       });
     }
   }
@@ -98,7 +93,7 @@ class App extends Component {
     this.setState({
       loading: true,
       imageList,
-      page: page + 1
+      page: page + 1,
     });
 
     await this.api();
@@ -115,7 +110,7 @@ class App extends Component {
 
         <Container>
           {imageList
-            ? imageList.map(image => (
+            ? imageList.map((image) => (
                 <Item
                   original_title={image.original_title}
                   title={image.title}
