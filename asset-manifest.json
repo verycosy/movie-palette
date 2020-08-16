@@ -1,11 +1,19 @@
 {
-  "main.js": "/movie-palette/static/js/main.4f1a8693.chunk.js",
-  "main.js.map": "/movie-palette/static/js/main.4f1a8693.chunk.js.map",
-  "runtime~main.js": "/movie-palette/static/js/runtime~main.1cd8e1fe.js",
-  "runtime~main.js.map": "/movie-palette/static/js/runtime~main.1cd8e1fe.js.map",
-  "static/js/2.a45932ad.chunk.js": "/movie-palette/static/js/2.a45932ad.chunk.js",
-  "static/js/2.a45932ad.chunk.js.map": "/movie-palette/static/js/2.a45932ad.chunk.js.map",
-  "index.html": "/movie-palette/index.html",
-  "precache-manifest.9ddb12a3e073fc4ec1f2e9ba3af2cd4d.js": "/movie-palette/precache-manifest.9ddb12a3e073fc4ec1f2e9ba3af2cd4d.js",
-  "service-worker.js": "/movie-palette/service-worker.js"
+  "files": {
+    "main.js": "/movie-palette/static/js/main.35fa30dd.chunk.js",
+    "main.js.map": "/movie-palette/static/js/main.35fa30dd.chunk.js.map",
+    "runtime-main.js": "/movie-palette/static/js/runtime-main.211ed1a3.js",
+    "runtime-main.js.map": "/movie-palette/static/js/runtime-main.211ed1a3.js.map",
+    "static/js/2.8c08568d.chunk.js": "/movie-palette/static/js/2.8c08568d.chunk.js",
+    "static/js/2.8c08568d.chunk.js.map": "/movie-palette/static/js/2.8c08568d.chunk.js.map",
+    "index.html": "/movie-palette/index.html",
+    "precache-manifest.b9f2f47b21e0cd891f73443f400f3bdf.js": "/movie-palette/precache-manifest.b9f2f47b21e0cd891f73443f400f3bdf.js",
+    "service-worker.js": "/movie-palette/service-worker.js",
+    "static/js/2.8c08568d.chunk.js.LICENSE.txt": "/movie-palette/static/js/2.8c08568d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.211ed1a3.js",
+    "static/js/2.8c08568d.chunk.js",
+    "static/js/main.35fa30dd.chunk.js"
+  ]
 }
