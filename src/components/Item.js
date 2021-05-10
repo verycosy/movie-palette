@@ -31,10 +31,10 @@ const Image = styled.img`
   width: 100%;
 `;
 
-export default ({ original_title, title, src, copy }) => (
+export default ({ original_title, title, src }) => (
   <Item>
     <Image src={src} />
-    <Palette src={src} copy={copy} />
+    <Palette src={src} />
     <Title>
       <OriginalTitle>{original_title}</OriginalTitle>
       <KORTitle>{title}</KORTitle>
